@@ -14,7 +14,7 @@ export class SchemaService {
   async saveSchemaItems(items: any): Promise<void> {
     const url = `${
       this.configService.get<Services>('services').tf2Schema
-    }/schema/items`;
+    }/items`;
 
     await this.httpService
       .post<any>(url, {
